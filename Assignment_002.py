@@ -1,3 +1,24 @@
+#----------------------------------------------
+#[01] Create 3 Variables Name, Age, Country
+#[02] Print This Text To The Console => "Hello 'Variable Name', How You Doing \ """ Your Age Is "Variable Age""
+#[03] Print The Same Previous Text But in 3 Lines Not Single Line
+#[04] Get The Letter "l" From Elzero 
+#[05] Get The Letter "o" From Elzero 
+#[06] Get The Letters "lze" From Elzero 
+#[07] Get The Letters "Ezr" From Elzero 
+#[08] Get The Letters "rzE" From Elzero 
+#[09] Remove Special Character From The String "#@#@Elzero#@#@" And Return Elzero
+#[10] Make A Function Add Zeros Before Given Number And Return Number Not Exceed 4 Width Example "0010", "1800"
+#[11] Make A Function Add Hashes Before Given String And Make Width Not Exceed 20 Characters
+#[12] Convert This String "OSamA" To "osAMa"
+#[13] Count How Much Word Love in This String "I Love Python And Although Love Elzero Web School"
+#[14] Find The Index Of The Letter "z" in String "Elzero"
+#[15] Replace The Word <3 With Love Letter One Time in This String => "I <3 Python And Although <3 Elzero Web School"
+#[16] Replace All The Words <3 With Love Letter in This String => "I <3 Python And Although <3 Elzero Web School"
+#[17] Format The Variables Created in Step One With The New Way f""
+#----------------------------------------------
+
+
 #[01] Create 3 Variables Name, Age, Country
 myName = "Ayman"
 myAge = 36
@@ -63,4 +84,3 @@ myAge = 36
 myContry = "Syria"
 #[17] Format The Variables Created in Step One With The New Way f""
 print(f"myName Is: {myName} and my Age Is: {myAge}")
-

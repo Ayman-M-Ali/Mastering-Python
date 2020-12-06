@@ -26,7 +26,7 @@ print("Imaginary Part Is : {}".format(complexNumber.imag))
 print("Real Part Is : {}".format(complexNumber.real))
 
 # [04] Convert Number 10 To Floating Point Number With 10 Number After Decimal
-print(float(10))
+print("{:.10f}".format(10))
 
 # [05] Convert Floating Number 159.650 To Integer
 print(int(159.650))

@@ -37,6 +37,9 @@ print(int(159.650))
 # --- Return The Results of Addition if Third Parameter is ( add )
 # --- Return The Results of Multiplication if Third Parameter is ( multiply )
 
+num1=5
+num2=3
+
 def calc(num1, num2, Operation):
     if Operation=='+':
         r = num1 + num2
@@ -44,8 +47,8 @@ def calc(num1, num2, Operation):
         r = num1 * num2
     return r
 
-print(type(5))
-print(type(3))
+print(isinstance(num1, int))
+print(isinstance(num2, int))
 
 r1 = calc(5, 3,"+")
 r2 = calc(5, 3, "*")

@@ -14,9 +14,9 @@
 # Make a list that contains the names of your friends and have at least 5 names. In the first and second line is to print the name of the first friend in the list in two ways, then on the third and fourth line you print the name of the last friend in the list in two ways.
 myFriends = ["Osama", "Ahmad", "Salah", "Malek", "Riyad"]
 print(myFriends[0])
-print(myFriends[0:1])
+print(myFriends[len(myFriends)-5])
 print(myFriends[-1])
-print(myFriends[-1:5])
+print(myFriends[len(myFriends)-1])
 
 # (2)From the previous list print the odd names on the first line and on the second line print the even names.
 print(myFriends[ : :2])
@@ -58,8 +58,9 @@ print(myFriends)
 
 # (9)In the first line, count the number of friends in the first way, and in the second line, count the number of friends in the second way
 print(len(myFriends))
-Get_List_length = len(myFriends)
-print(Get_List_length)
+#Get_List_length = len(myFriends)
+#print(Get_List_length)
+print (myFriends.__len__())
 
 # (10)Make a list in which the well-known programming languages and within it a submenu with the names of famous frameworks, then in the first line print the name of the first framework in the submenu and in the second line the name of the last framework in the submenu, bearing in mind that the list can increase
 programmingLanguages = ["python", "Javascript", "Php", ["Django", "React", "Laravel"]]

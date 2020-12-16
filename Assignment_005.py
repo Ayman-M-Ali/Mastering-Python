@@ -48,15 +48,14 @@ numbers = (1, 2, 3)
 letters = ("A", "B", "C")
 items = numbers + letters
 print(items)
-newTuple = list(items)
-print(newTuple)
-newTuple[1] = "A"
-newTuple[2] = 2
-newTuple[3] = "B"
-newTuple[4] = 3
-print(newTuple)
-targetTuple = tuple(newTuple)
+newItems = ((numbers, ) + (letters, ))
+print(newItems)
+targetTuple = tuple(zip(*newItems))
 print(targetTuple)
+a, b, c = (targetTuple[0]), (targetTuple[1]), (targetTuple[2])
+newSulotion = a + b + c
+print(newSulotion)
+
 print(len(items))
 print(items.__len__())
 
@@ -71,4 +70,5 @@ a, b, _, c = media
 print(a)
 print(b)
 print(c)
+
 

@@ -49,13 +49,16 @@ letters = {"A", "B", "C"}
 nums | letters
 nums.union(letters)
 nums.update(letters)
-import operator
-from functools import reduce
-reduce(operator.or_, [nums, letters])
+for i in nums:
+    print((i) + ',' + (letters))
+#import operator
+#from functools import reduce
+#reduce(operator.or_, [nums, letters])
 print(nums)
 print(nums)
 print(nums)
-print(nums)
+
+
 
 print("=" *50)
 #=========================================================================
@@ -87,32 +90,16 @@ print("=" *50)
 # (5)Create a dictionary containing four programming skills with the percentage of your level in them
 #    Without Looping, print each skill on a line with the percentage written level next to it
 #    Add a new skill to the Dictionary with its percentage and then print it on the fifth line
+
 my_dict = {
-    "one" :{
-        "name" : "HTML",
-        "progress" : "90%"
-    },
-    "two" :{
-        "name" : "CSS",
-        "progress" : "80%"
-    },
-    "three" :{
-        "name" : "javaScript",
-        "progress" : "40%"
-    },
-    "four" :{
-        "name" : "Python",
-        "progress" : "30%"
-    }
+    "HTML" : "90%",
+    "Css" : "90%",
+    "Js" : "90%",
+    "Python" : "90%"
 }
-print('"'+ my_dict["one"]["name"] + " progress Is " + my_dict["one"]["progress"]+'"')
-print('"'+ my_dict["two"]["name"] + " progress Is " + my_dict["two"]["progress"]+'"')
-print('"'+ my_dict["three"]["name"] + " progress Is " + my_dict["three"]["progress"]+'"')
-print('"'+ my_dict["four"]["name"] + " progress Is " + my_dict["four"]["progress"]+'"')
-my_dict = {
-    "five" : {
-        "name" : "API",
-        "progress" : "20%"
-    }
-}
-print('"'+ my_dict["five"]["name"] + " progress Is " + my_dict["five"]["progress"]+'"')
+my_dict.update({"API" : "20%"})
+print(f"'{'HTML'} progress Is {my_dict.get('HTML')}'")
+print(f"'{'Css'} progress Is {my_dict.get('Css')}'")
+print(f"'{'Js'} progress Is {my_dict.get('Js')}'")
+print(f"'{'Python'} progress Is {my_dict.get('Python')}'")
+print(f"'{'API'} progress Is {my_dict.get('API')}'")

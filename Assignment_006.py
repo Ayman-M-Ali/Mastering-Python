@@ -49,8 +49,8 @@ letters = {"A", "B", "C"}
 nums | letters
 nums.union(letters)
 nums.update(letters)
-for i in nums:
-    print((i) + ',' + (letters))
+for i in nums, letters :
+    print(i)
 #import operator
 #from functools import reduce
 #reduce(operator.or_, [nums, letters])

@@ -30,10 +30,16 @@
 #    On the second line print the unique_list type and make sure the data type is list
 #    On the third line, print the unique_list without the last element
 my_list = [1, 2, 3, 3, 4, 5, 1]
-unique_list = list(set(my_list))
-print(unique_list)
-print(type(unique_list))
-print(unique_list[:4])
+
+unique_list = set(my_list)  # Change To Set
+
+unique_list = list(unique_list)  # Change Back To List
+
+print(unique_list)  # [1, 2, 3, 4, 5]
+
+print(type(unique_list))  # <class 'list'>
+
+print(unique_list[:-1])  # [1, 2, 3, 4]
 
 print("=" *50)
 #=========================================================================
@@ -49,8 +55,7 @@ letters = {"A", "B", "C"}
 nums | letters
 nums.union(letters)
 nums.update(letters)
-for i in nums, letters :
-    print(i)
+
 #import operator
 #from functools import reduce
 #reduce(operator.or_, [nums, letters])
@@ -67,14 +72,23 @@ print("=" *50)
 #    Empty the entire set content with only one line, then print the content on the second line to make sure it is completely blank
 #    Add two “A” and “B” elements to this set and print their content on the third line
 #    Try to remove the "C" element, of course, the element does not exist. Make sure that you will not get an error when you try to remove the non-existing element
-items = {1, 2, 3}
-print(items)
-items.clear()
-print(items)
-newSet = {"A", "B"}
-items.update(newSet)
-print(items)
-print(items.discard("C"))
+my_set = {1, 2, 3}
+
+letters = {"A", "B", "C"}
+
+print(my_set)  # {1, 2, 3}
+
+my_set.clear()  # Empty The Set
+
+print(my_set)  # set()
+
+my_set.update("A", "B")
+
+print(my_set)  # {'A', 'B'}
+
+# my_set.remove("C") # Error Will Appear
+
+my_set.discard("C")  # No Error Will Appear
 
 print("=" *50)
 #=========================================================================
@@ -103,3 +117,8 @@ print(f"'{'Css'} progress Is {my_dict.get('Css')}'")
 print(f"'{'Js'} progress Is {my_dict.get('Js')}'")
 print(f"'{'Python'} progress Is {my_dict.get('Python')}'")
 print(f"'{'API'} progress Is {my_dict.get('API')}'")
+
+# Or This Best
+print(f"{list(my_dict)[0]} => {list(my_dict.values())[0]}")  # HTML => 80%
+print(f"{list(my_dict)[1]} => {list(my_dict.values())[1]}")  # CSS => 70%
+print(f"{list(my_dict)[2]} => {list(my_dict.values())[2]}")  # JS => 60%

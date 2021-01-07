@@ -1,5 +1,5 @@
 #--------------------------------------------
-# [01] Write Down All Types Of Integer
+# [01] Write Down All Types Of Numbers
 # [02] Get The Imaginary Part For The Complex Number "1+2j"
 # [03] Get The Real Part For The Complex Number "1+2j"
 # [04] Convert Number 10 To Floating Point Number With 10 Number After Decimal
@@ -13,13 +13,21 @@
 # [08] Whats The Different Between 21 / 2 And 21 // 2 "Write Soultion With Comment"
 #--------------------------------------------
 
-# [01] Write Down All Types Of Integer
-print(10)
-print(-10)
-print(0)
+# [01] Write Down All Types Of Numbers
+print(100)
+print(50.50)
+print(1+2j)
+
+print(type(100))  # Int
+print(type(50.50))  # Float
+print(type(1+2j))  # Complex
 
 # [02] Get The Imaginary Part For The Complex Number "1+2j"
 complexNumber = 1+2j
+
+print(1+2j.imag)
+print(1+2j.real)
+# or This below
 print("Imaginary Part Is : {}".format(complexNumber.imag))
 
 # [03] Get The Real Part For The Complex Number "1+2j"
@@ -27,6 +35,9 @@ print("Real Part Is : {}".format(complexNumber.real))
 
 # [04] Convert Number 10 To Floating Point Number With 10 Number After Decimal
 print("{:.10f}".format(10))
+# Or This Below
+num = 10
+print(f"{num:.10f}")
 
 # [05] Convert Floating Number 159.650 To Integer
 print(int(159.650))

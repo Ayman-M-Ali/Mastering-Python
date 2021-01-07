@@ -20,31 +20,33 @@
 
 
 #[01] Create 3 Variables Name, Age, Country
-myName = "Ayman"
-myAge = 36
-myContry = "Syria"
+my_name = "Ayman"
+my_age = "36"
+my_country = "Syria"
 
 #[02] Print This Text To The Console => "Hello 'Variable Name', How You Doing \ """ Your Age Is "Variable Age""
-print('''"Hello 'Ayman', How You Doing \ """ Your Age Is "36""''')
+print(f"\"Hello \'{my_name}\', How You Doing \ \"\"\" Your Age Is \"{my_age}\"\" + And Your Country Is: {my_country}")
+
+print("\n##############################\n")
 
 #[03] Print The Same Previous Text But in 3 Lines Not Single Line
-print("Hello {:s},\nHow You Doing\"""\nYour Age Is {:d}".format (myName, myAge))
+print("\"Hello \'" + my_name + "\', How You Doing \ \n\"\"\" Your Age Is \"" + my_age + "\"\" +\n And Your Country Is: " + my_country)
 
 #[04] Get The Letter "l" From Elzero 
 name = "Elzero"
 print(name[1])
 
 #[05] Get The Letter "o" From Elzero 
-print(name[5])
+print(name[-1])
 
 #[06] Get The Letters "lze" From Elzero 
 print(name[1:4])
 
 #[07] Get The Letters "Ezr" From Elzero 
-print(name[0: :2])
+print(name[0::2])
 
 #[08] Get The Letters "rzE" From Elzero 
-print(name[-2: :-2])
+print(name[-2::-2])
 
 #[09] Remove Special Character From The String "#@#@Elzero#@#@" And Return Elzero
 myString = "#@#@Elzero#@#@"

@@ -14,20 +14,20 @@
 # Make a list that contains the names of your friends and have at least 5 names. In the first and second line is to print the name of the first friend in the list in two ways, then on the third and fourth line you print the name of the last friend in the list in two ways.
 myFriends = ["Osama", "Ahmad", "Salah", "Malek", "Riyad"]
 print(myFriends[0])
-print(myFriends[len(myFriends)-5])
+print(myFriends.pop(0))
 print(myFriends[-1])
-print(myFriends[len(myFriends)-1])
+print(myFriends.pop(-1))
 
 # (2)From the previous list print the odd names on the first line and on the second line print the even names.
-print(myFriends[ : :2])
-print(myFriends[1: :2])
+print(myFriends[::2])
+print(myFriends[1::2])
 
 # (3)Print the group of names No. 2, 3, and 4 in the first line, then the last name and the one before it in the second line, noting that the code should work in case we change the number of items in the list.
 print(myFriends[1:4])
-print(myFriends[3:5])
+print(myFriends[-2:])
 
 # (4)Update the last two names in the list with the name "Elzero"
-myFriends[3:5]=["Elzero", "Elzero"]
+myFriends[-2:]=["Elzero", "Elzero"]
 print(myFriends)
 
 # (5)Add a name from your friends to the list at the top of the list first, then add another name at the end of the list
@@ -37,9 +37,11 @@ myFriends.append("Mohammad")
 print(myFriends)
 
 # (6)Delete the first two names from the list, then on another line, remove the last name from the list
-myFriends[0:2] = []
+myFriends = myFriends[2:]
 print(myFriends)
 myFriends.remove("Mohammad")
+# Or This below
+myFriends = myFriends[:-1]
 print(myFriends)
 
 # (7)Create another two lists with more friends, then add them to the first list to come out with the final list in which all friends
@@ -64,5 +66,5 @@ print (myFriends.__len__())
 
 # (10)Make a list in which the well-known programming languages and within it a submenu with the names of famous frameworks, then in the first line print the name of the first framework in the submenu and in the second line the name of the last framework in the submenu, bearing in mind that the list can increase
 programmingLanguages = ["python", "Javascript", "Php", ["Django", "React", "Laravel"]]
-print(programmingLanguages[3][0])
-print(programmingLanguages[3][-1])
+print(programmingLanguages[-1][0])
+print(programmingLanguages[-1][-1])

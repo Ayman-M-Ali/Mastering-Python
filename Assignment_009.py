@@ -23,11 +23,32 @@
 #-------------------------------------------------------------------
 
 # start Assignment (1)
-num1 = int(input("Put Number : ").strip())
-num2 = int(input("Put Number : ").strip())
-operation = input(("Put Arithmetic Operator : ").strip())
+num1 = input("Add Number One: ").strip()
+num2 = input("Add Number Two: ").strip()
+operation = input("Add Operation: ").strip()
 
-print(f"{num1} + {num2} = {num1 + num2}")
+num1 = int(num1)
+num2 = int(num2)
+
+if operation == '+':
+
+    print(num1 + num2)
+
+elif operation == '-':
+
+    print(num1 - num2)
+
+elif operation == '*':
+
+  print(num1 * num2)
+
+elif operation == '/':
+
+    print(num1 / num2)
+
+elif operation == '%':
+
+    print(num1 % num2)
 
 print("\n####### End Assignment (1) #######\n")
 
@@ -39,27 +60,34 @@ print("App Is Suitable For You" if age > 16 else "App Is Not Suitable For You") 
 print("\n####### End Assignment (2) #######\n")
 
 #    start Assignment (3)
-my_age = int(input("my Age Is: ").strip())                  # input Age
+age_input = input("Input Your Age: ")
 
-if my_age > 10 and my_age > 100 :                           # if condition
-    print("Your Age Is Out of Range")
+age_input = int(age_input)
+
+if 10 < age_input < 100 :                           # if condition
+
+    months = age_input * 12                         # 12 Months Per Year
+
+    weeks = months * 4                              # 4 Weeks Per Month
+
+    days = age_input * 365                          # 365 Days Per Year || months * 30
+
+    hours = days * 24                               # 24 Hours Per Day
+
+    minutes = hours * 60                            # 60 Minutes Per Hour
+
+    seconds = minutes * 60                          # 60 Seconds Per Minute
+
+    print("You Lived for: ")
+    print(f'"You Age In Months Are: {months} month."')
+    print(f'"You Age In Weeks Are: {weeks} week."')
+    print(f'"You Age In Days Are: {days:,} day."')
+    print(f'"You Age In Hours Are: {hours:,} hours."')
+    print(f'"You Age In Minutes Are: {minutes:,} minutes."')
+    print(f'"You Age In Seconds Are: {seconds:,} second."')
+
 else :
-    print("It will Calculate Your Age In All Units")
-
-months = my_age * 12                                        # Calculate
-weeks = months * 4                                          # Calculate
-days = my_age * 365                                         # Calculate
-hours = days * 24                                           # Calculate
-minutes = hours * 60                                        # Calculate
-seconds = minutes * 60                                      # Calculate
-
-print("You Lived for: ")
-print(f'"You Age In Months Are: {months} month."')
-print(f'"You Age In Weeks Are: {weeks} week."')
-print(f'"You Age In Days Are: {days:,} day."')
-print(f'"You Age In Hours Are: {hours:,} hours."')
-print(f'"You Age In Minutes Are: {minutes:,} minutes."')
-print(f'"You Age In Seconds Are: {seconds:,} second."')
+    print("Age Is Out of Range")
 
 print("\n####### End Assignment (3) #######\n")
 
@@ -71,8 +99,11 @@ discount = 30
 
 if country in countries :
 
-    print(f"Your Country {country} Is exist in the Discount List")
-    print(f"Your Country Eligible For Discount And The Price After Discount Is: {price - discount}")
-    
-else :
-    print(f"Your Country Eligible For Discount And The Price After Discount Is {price}")
+
+    price -= discount # price = price - discount # 100 - 30 = 70
+
+    print(f"Your Country Eligible For Discount And The Price After Discount Is ${price}")
+
+else:
+
+    print(f"Your Country Not Eligible For Discount And The Price Is ${price}")

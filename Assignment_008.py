@@ -50,8 +50,21 @@ print("\n####### End Assignment (2)  ########\n")
 #   start Assignment (4)
 email = input('What\'s Your Email? ').strip().lower()                             # input
 
-print(f"Your Name Is: " ({email}[ : email.index("@")]).strip().capitalize())                    # userName 
+# Example Input Osama@Nn.Sa
 
-print(email[email.index("@") + 1 : email.index(".")])                     # website 
+# Slice From 0 To Index @
+username = email[:email.index("@")].capitalize()
 
-print(email[email.index(".") + 1 : ])                                     # top Level Domain After Dot
+print(f"Your Name Is: {username}")                  # userName 
+
+# Slice From Index @ + 1 So @ Is Not Included
+
+website = email[email.index("@") + 1: email.index(".")]
+
+print(f"Email Service Provider Is {website}")  # "nn"
+
+# Slice From Index . + 1 So . Is Not Included
+
+top_level_domain = email[email.index(".") + 1:]
+
+print(f"Top Level Domain Is {top_level_domain}")  # "sa"

@@ -8,24 +8,33 @@
 #If the numbers contain the number 6, do not print it among the numbers
 #After the numbers are printed, print a message stating that all the numbers have been successfully printed and write how many numbers have been printed
 
-num = input("Insert a number: ")
-num = int(num)                                           # convert To int
-new_num = 0                                              # new Num To Loop It
-nums = num -2                                            # The Number of Reiterate Numbers
-if num <= 0:    
-    print("The Number Is Not Larger Than 0")
-else:
-    print(f"num = {num}")
-while num > new_num:
-    num -= 1
-    if num == 6:
-        continue
-    elif num == 0:
-        break
-    print(num)
-print(f'"{nums} Numbers Printed Successfully."')
+num = int(input("Input Your Number: "))
 
-print("\n##### End Assignment (1) #####\n" )
+index = 0
+
+if type(num) == int and num > 0:
+
+  while num > 0:
+
+   num -= 1
+
+   if num in (0, 6):
+
+      continue
+
+   print(num)
+
+   index += 1
+
+  else:
+
+   print(f"{index} Numbers Printed Successfully.")
+
+else:
+
+  print(f"Number {num} Is Not Larger Than 0")
+
+print("\n##### End Of Assignment 1 #####\n")
 
 #-----------------------------------------------------------------
 # No (2)
@@ -39,24 +48,19 @@ ignored = 0
 
 while friends:
 
-        if friends[0][0].islower():
+	if friends[0][0].islower():
 
-                friends.pop(0)
+		friends.pop(0)
 
-                ignored += 1
+		ignored += 1
 
-        else:
-
-                print(friends.pop(0))
+	else:
+  		print(friends.pop(0))
 
 else:
-
-        print(f"Friends Printed And Ignored Names Count Is {ignored}")
+	print(f"Friends Printed And Ignored Names Count Is {ignored}")
 
 print("\n##### End Of Assignment 2 #####\n")
-
-
-
 
 #-----------------------------------------------------------------
 # No (3)
@@ -66,7 +70,7 @@ print("\n##### End Of Assignment 2 #####\n")
 skills = ["HTML", "CSS", "JavaScript", "PHP", "Python"]
 
 while skills :
-        print(skills.pop(0))
+      print(skills.pop(0))
 print("\n##### End Of Assignment 3 #####\n")
 
 #------------------------------------------------------------------
@@ -85,17 +89,35 @@ print("\n##### End Of Assignment 3 #####\n")
 #-----------------------------------------------------------------
 
 my_friends = []
-maximum_num = 4
-while maximum_num > 0 :
-        name = input("write your name: ").strip()
-        if name == name.upper() :
-                print("Invalid Name")
-        elif name == name.lower() :
-                print(f"Friend {name} Added => 1st Letter Become Capital: {name.capitalize()}")
-        elif name == name.capitalize() :
-                print(f"Friend {name} Added")
-        my_friends.append(name.capitalize())
-        maximum_num -= 1
-        print(f"Names Left in List Is {maximum_num}")
-else :
-        print("List Is Full, You Can't Add More")
+
+max_friends = 4
+
+while 0 < max_friends:
+
+  friend_input = input("Write Friend Name > ").strip()
+
+  if friend_input.isupper():
+
+   print("Invalid Name")
+
+  else:
+
+   if friend_input.islower():
+
+      print(f"Friend {friend_input} Added => 1st Letter Become Capital")
+
+      friend_input = friend_input.title()
+
+   else:
+
+      print(f"Friend {friend_input} Added")
+
+   my_friends.append(friend_input)
+
+   max_friends -= 1
+
+   print(f"{max_friends} Friends Left.")
+
+else:
+
+  print("Friend List Is Full")

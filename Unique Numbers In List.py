@@ -14,7 +14,7 @@
 #------------------------------------------------------------------------------
 
 def get_uniques(nums):
-  
+
     only_numbers = []  # Empty List To Contain Numbers Only
 
     for n in nums:

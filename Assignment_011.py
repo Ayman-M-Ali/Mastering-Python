@@ -11,7 +11,7 @@ my_nums = [15, 81, 5, 17, 20, 21, 13]
 
 my_nums.sort(reverse = True)
 
-counter = 3
+counter = 1
 
 for num in my_nums :
 
@@ -19,7 +19,7 @@ for num in my_nums :
 
     print(f"{counter} => {num}")
     
-    counter -= 1
+    counter += 1
 
 print('"All Numbers printed"')
 
@@ -58,34 +58,110 @@ print("###### End Assignment (2) ######")
 #   Print the score at the end after the loop is finished
 #--------------------------------------------------------
 
-my_rank = {
-
-  "Math" : 'A',
+my_ranks = {
+  'Math': 'A',
   "Science": 'B',
   'Drawing': 'A',
   'Sports': 'C'
-
 }
-A = 100
-B = 80
-C = 40
 
-for rank_key, rank_value in my_rank.items() :
+points = {
+  "A": 100,
+  "B": 80,
+  "C": 40
+}
 
-  print(f"My Rank in {rank_key} Is: {rank_value} And This Equal", end = " ")
+total = 0
 
-  if rank_value == "A" :
+for rank in my_ranks:
 
-    print("100 points")
+  r = rank  # Rank Name
 
-  elif rank_value == "B" :
+  v = my_ranks.get(rank)  # Rank Value
 
-    print("80 points")
+  print(f"My Rank in {r} Is {v} And This Equal {points.get(v)} Points")
+
+  total += points.get(v)
+
+else:
+
+  print(f"Total Points Is {total}")
+
+print("\n##### End Of Assignment 3 #####\n")
+
+# Assignment 4
+
+students = {
+  "Ahmed": {
+    "Math": "A",
+    "Science": "D",
+    "Draw": "B",
+    "Sports": "C",
+    "Thinking": "A"
+  },
+  "Sayed": {
+    "Math": "B",
+    "Science": "B",
+    "Draw": "B",
+    "Sports": "D",
+    "Thinking": "A"
+  },
+  "Mahmoud": {
+    "Math": "D",
+    "Science": "A",
+    "Draw": "A",
+    "Sports": "B",
+    "Thinking": "B"
+  }
+}
+
+the_points = {
+  "A": 100,
+  "B": 80,
+  "C": 40,
+  "D": 20
+}
+
+# Normal Solution
+
+for name in students:
+
+  print("-" * 30)
+
+  print(f"-- Student Name => {name}")
+
+  print("-" * 30)
+
+  student_points = 0
+
+  for skill in students[name]:
+
+    print(f"- {skill} => {the_points[students[name][skill]]} Points")
+
+    student_points += the_points[students[name][skill]]
 
   else:
 
-    print("40 points")
+    print(f"Total Points For {name} Is {student_points}")
 
-sum = A + B + A + C
+# Solution With items()
 
-print(f"'Total Points Is {sum}")
+for name, value in students.items():
+
+  print("-" * 30)
+
+  print(f"-- Student Name => {name}")
+
+  print("-" * 30)
+
+  student_points = 0
+
+  for child_key, child_value in value.items():
+
+    print(f"- {child_key} => {the_points[child_value]} Points")
+
+    student_points += the_points[child_value]
+
+  else:
+
+    print(f"Total Points For {name} Is {student_points}")
